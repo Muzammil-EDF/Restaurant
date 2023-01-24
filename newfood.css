@@ -1,0 +1,821 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+}
+
+body {
+    background-color: snow;
+}
+
+header {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-shrink: 1;
+    align-items: center;
+    padding: 0 2em;
+}
+
+.logo {
+    padding: 0.5em 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo img {
+    transition: all 1s ease;
+}
+
+.logo h5 {
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 1px;
+}
+
+.logo img:hover {
+    transform: rotate(-45deg);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav ul {
+    padding: 0.3em 0.3em;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex: 1;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 0.4em 1em;
+    border-radius: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+nav ul li:hover {
+    background-color: orangered;
+    color: snow;
+}
+
+nav .nav-media-icons {
+    display: none;
+}
+
+.bar {
+    display: none;
+}
+
+.media-icons i,
+.bar i {
+    font-size: 20px;
+    padding: 0.2rem;
+}
+
+.media-icons i+i {
+    margin-left: 10px;
+}
+
+/* ==========================================================section-1======================================================== */
+
+
+.section-1 {
+    padding: 1.5rem;
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'box-1 box-2 box-3'
+        'box-1 box-2 box-4'
+        'box-5 box-2 box-6'
+    ;
+    gap: 2rem;
+}
+
+.box {
+    padding: 0.5em 1em;
+    color: snow;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* ======================BOX-1=========================== */
+
+.box-1 {
+    min-height: 100%;
+    grid-area: box-1;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.box-1 .heading {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-family: 'Fredoka One', cursive;
+}
+
+.box-1 .price {
+    display: flex;
+    gap: 1rem;
+}
+
+.box-1 .price h1 {
+    font-size: 30px;
+    color: orangered;
+}
+
+.price:nth-child(2) {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: gray;
+}
+
+.box-1 .para {
+    line-height: 1.6;
+    max-width: 40ch;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.box-1 .click {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.click button {
+    border: none;
+    background-color: orangered;
+    color: snow;
+    padding: 1em 1.5em;
+    border-radius: 2em;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.click a {
+    font-family: 'Ubuntu', sans-serif;
+    cursor: pointer;
+    color: black;
+    font-weight: 900;
+    font-size: 18px;
+    border-bottom: 1px solid #0A0909;
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+
+.click a i {
+    margin-left: 5px;
+    padding: 0.2rem;
+}
+
+/* ======================BOX-2=========================== */
+
+.box-2 {
+    grid-area: box-2;
+    z-index: 1;
+    min-width: 100%;
+}
+
+/* ======================BOX-3,4,6=========================== */
+
+.box-3,
+.box-4,
+.box-6 {
+    width: fit-content;
+    height: fit-content;
+    place-self: center;
+    grid-area: box-3;
+    text-align: center;
+    color: black;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    background-color: whitesmoke;
+    margin-right: 2rem;
+}
+
+.box-4 {
+    grid-area: box-4;
+    padding: 0.7rem 1.8rem;
+}
+
+.box-5 {
+    /* background-color: firebrick; */
+    grid-area: box-5;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    color: black;
+}
+
+.box-5 .ingredients {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
+}
+
+.ingredients .things {
+    padding: 0.4em 1em;
+    display: flex;
+    gap: 0.2em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+}
+
+.box-6 {
+    grid-area: box-6;
+    padding: 0.7rem 1rem;
+}
+
+
+/* ==========================================================section-2======================================================== */
+
+
+.section-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.boxes {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    padding: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content {
+    width: 100%;
+    color: black;
+}
+
+.content>h1 {
+    padding: 0.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content>p {
+    margin-top: 10px;
+    padding: 0.5em;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.take img {
+    display: block;
+    padding: 0.3rem;
+}
+
+
+/* ==========================================================section-3======================================================== */
+
+.one {
+    grid-area: one;
+    place-self: center;
+}
+
+.two .pop-heading {
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 3px;
+}
+
+.one img {
+    display: block;
+}
+
+.two {
+    grid-area: two;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    place-self: center;
+}
+
+.two h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: #0A0909;
+    word-spacing: 10px;
+
+}
+
+.two div+div {
+    margin-top: 2rem;
+}
+
+.pop-click button {
+    border: none;
+    background-color: orangered;
+    color: snow;
+    padding: 1em 1.5em;
+    border-radius: 2em;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.pop-click a {
+    font-family: 'Ubuntu', sans-serif;
+    margin-left: 1em;
+    text-decoration: none;
+    border-bottom: 1px solid #0A0909;
+    padding-bottom: 2px;
+    cursor: pointer;
+    color: black;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.two .pop-para {
+    max-width: 50ch;
+    line-height: 1.6;
+    word-spacing: 2px;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.three,
+.four {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 20px;
+    grid-area: three;
+    place-self: center;
+    background-color: whitesmoke;
+}
+
+.four {
+    grid-area: four;
+}
+
+.section-3 {
+    padding: 2rem;
+    min-height: 100vh;
+    gap: 2rem;
+    display: grid;
+    grid-template-areas:
+        'one  two two'
+        'one three four'
+    ;
+}
+
+.same {
+    display: flex;
+    flex-direction: column;
+    padding: 0.3rem;
+    color: #0A0909;
+    gap: 0.2em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.three img {
+    width: 100%;
+}
+
+.three .same {
+    width: 100%;
+}
+
+.four img {
+    width: 100%;
+}
+
+.four .same {
+    width: 100%;
+}
+
+
+.section-4 {
+    grid-template-areas:
+        'title title title'
+        'item-1 item-2 item-3'
+        'item-4 item-5 item-6'
+        'item-7 item-8 item-9'
+    ;
+    padding: 2rem;
+    display: grid;
+    min-height: 100vh;
+    row-gap: 1rem;
+    column-gap: 2.5rem;
+}
+
+.menu {
+    background-color: whitesmoke;
+    border-radius: 30px;
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 3rem;
+    line-height: 1.5;
+    /* place-self: center; */
+    transition: all 250ms ease;
+}
+
+.menu:hover {
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.description {
+    font-family: 'Signika Negative', sans-serif;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.description h1 {
+    font-family: 'Ubuntu', sans-serif;
+
+    color: #ED7A3C;
+}
+
+.description h3 {
+    font-family: 'Ubuntu', sans-serif;
+
+    color: #ED7A3C;
+}
+
+
+.title {
+    margin: 2em 0 0.8em 0;
+    font-family: 'Fredoka One', cursive;
+    grid-area: title;
+    place-self: center;
+    font-size: 30px;
+
+}
+
+.item-1 {
+    grid-area: item-1;
+}
+
+.item-2 {
+    grid-area: item-2;
+}
+
+.item-3 {
+    grid-area: item-3;
+}
+
+.item-4 {
+    grid-area: item-4;
+}
+
+.item-5 {
+    grid-area: item-5;
+}
+
+.item-6 {
+    grid-area: item-6;
+}
+
+.item-7 {
+    grid-area: item-7;
+}
+
+.item-8 {
+    grid-area: item-8;
+}
+
+.item-9 {
+    grid-area: item-9;
+}
+
+.section-5 {
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+.deal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.boy {
+    max-width: min-content;
+}
+
+.best-deal {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.best-deal h1 {
+    font-size: 50px;
+}
+
+.best-deal h3 {
+    font-family: cursive;
+    color: orangered;
+}
+
+.best-deal p {
+    max-width: 55ch;
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.best-deal span button {
+    border: none;
+    background-color: orangered;
+    color: snow;
+    padding: 1em 2.5em;
+    border-radius: 20px;
+}
+
+.best-deal span a {
+    text-decoration: none;
+    border: none;
+    color: #0A0909;
+    margin-left: 1rem;
+}
+
+.section-6 {
+    background-color: whitesmoke;
+    min-height: 50vh;
+    display: flex;
+    gap: 10rem;
+    align-items: center;
+    padding: 0 0 0 2rem;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer .logo-word {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.footer .logo-word h1 {
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    font-size: 30px;
+}
+
+.footer .context {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.footer .unlist ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.footer .unlist ul li {
+    padding: 0.2em 0.5em;
+    color: orangered;
+}
+
+.newsletter {
+    width: 100%;
+    font-family: 'Signika Negative', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.newsletter h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: orangered;
+    font-family: 'Fredoka One', cursive;
+}
+
+.newsletter p {
+    max-width: 60ch;
+}
+
+.newsletter .searchbar {
+    background-color: snow;
+    overflow: hidden;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    padding: 0.2rem 0.2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.newsletter .searchbar input,
+i {
+    background: transparent;
+    padding: 1rem 1rem;
+    outline: none;
+    border: none;
+}
+
+.newsletter .searchbar i:hover {
+    color: snow;
+    background-color: orangered;
+}
+
+.newsletter .searchbar i {
+    border-radius: 50%;
+}
+
+
+/* ====================================================Media-Query:1024px===================================== */
+
+@media (max-width:1024px) {
+    .section-1 {
+        gap: 1rem;
+    }
+
+    .deal .boy img {
+        width: 400px;
+    }
+
+    .section-4 {
+        grid-template-areas:
+            'title title'
+            'item-1 item-2'
+            'item-1 item-3'
+            'item-4 item-5'
+            'item-6 item-7'
+            'item-8 item-9'
+        ;
+
+    }
+}
+
+
+@media (max-width:768px) {
+
+    .media-icons {
+        display: none;
+    }
+
+    .logo h3 {
+        font-size: 20px;
+    }
+
+    nav .nav-media-icons i {
+        font-size: 16px;
+        padding: 0.4rem;
+    }
+
+    .box-1 .para p {
+        font-size: 15px;
+    }
+
+    .box-1 .click {
+        gap: 1rem;
+    }
+
+    .box-1 .click a {
+        font-size: 10px;
+        border: none;
+    }
+
+    nav {
+        margin: 1.4rem 0 0 0;
+    }
+
+    nav .nav-media-icons {
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .section-1 {
+        grid-template-areas:
+            'box-1 box-2 box-2'
+            'box-3 box-4 box-6'
+            'box-5 box-5 box-5'
+        ;
+        gap: 2rem;
+    }
+
+    .box-5 .ingredients {
+        width: 100%;
+    }
+
+    .section-2 {
+        flex-direction: column;
+    }
+
+    .deal .boy img {
+        width: 350px;
+    }
+
+    .newsletter h1 {
+        font-size: 20px;
+    }
+
+    .section-6 {
+        gap: 5rem;
+    }
+
+    .footer {
+        gap: 0.5rem;
+    }
+
+    .newsletter p {
+        max-width: 35ch;
+        font-size: 14px;
+    }
+
+    .one img {
+        width: 300px;
+    }
+
+    .pop-para {
+        font-size: 15px;
+    }
+
+    .three img {
+        width: 80px;
+    }
+
+    .four img {
+        width: 80px;
+    }
+
+    .three,
+    .four {
+        gap: 0;
+    }
+
+    .three h1 {
+        font-size: 15px;
+    }
+
+    .three h3 {
+        font-size: 13px;
+    }
+
+    .four h1 {
+        font-size: 15px;
+    }
+
+    .four h3 {
+        font-size: 13px;
+    }
+
+    .context {
+        font-size: 14px;
+    }
+
+    .menu {
+        padding: 0.1rem 1rem;
+    }
+}
+
+@media (max-width:425px) {
+    nav {
+        display: none;
+    }
+
+    .bar {
+        display: block;
+    }
+}
